@@ -6,20 +6,8 @@
     <title>HubSpot Form Embed Demo</title>
   </head>
   <body>
-    <script src="../dist/index.js"></script>
+    <script src="../dist/index.js" type="module" defer="true"></script>
 
-    <script>
-      hbspt.forms.create({
-        onFormReady: () => {
-          console.log("onFormReady()");
-        },
-        onFormSubmit: () => {
-          console.log("onFormSubmit()");
-        },
-        onFormSubmitted: () => {
-          console.log("onFormSubmitted()");
-        },
-      });
-    </script>
+    <script defer="true" src="app.js"></script>
   </body>
 </html>

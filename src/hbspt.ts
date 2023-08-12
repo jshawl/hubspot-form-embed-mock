@@ -10,9 +10,13 @@ export const hbspt = {
       const form = document.createElement("form");
       const input = document.createElement("input");
       const submit = document.createElement("button");
+      const label = document.createElement("label");
+      label.innerHTML =
+        "<span>Email</span><span class='hs-form-required'>*</span>";
       submit.innerHTML = "Submit";
       submit.setAttribute("type", "submit");
       input.setAttribute("type", "email");
+      form.appendChild(label);
       form.appendChild(input);
       form.appendChild(submit);
 

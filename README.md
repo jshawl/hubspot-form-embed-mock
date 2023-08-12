@@ -14,8 +14,8 @@ Replace your existing HubSpot embed `script`
   charset="utf-8"
   defer="true"
   type="text/javascript"
-  src="https://js.hsforms.net/forms/embed/v2.js">
-</script>
+  src="https://js.hsforms.net/forms/embed/v2.js"
+></script>
 ```
 
 with a link to this package:
@@ -25,6 +25,6 @@ with a link to this package:
   charset="utf-8"
   defer="true"
   type="text/javascript"
-  src="https://unpkg.com/hubspot-form-embed-mock/dist/index.js">
-</script>
+  src="https://unpkg.com/hubspot-form-embed-mock/dist/index.js"
+></script>
 ```
