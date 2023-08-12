@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HubSpot Form Embed Demo</title>
+  </head>
+  <body>
+    <script src="../dist/index.js"></script>
+
+    <script>
+      hbspt.forms.create({
+        onFormReady: () => {
+          console.log("onFormReady()");
+        },
+        onFormSubmit: () => {
+          console.log("onFormSubmit()");
+        },
+        onFormSubmitted: () => {
+          console.log("onFormSubmitted()");
+        },
+      });
+    </script>
+  </body>
+</html>
