@@ -1,8 +1,12 @@
 {
-  "name": "hubspot-embed-mock",
+  "name": "hubspot-form-embed-mock",
   "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
+  "files": [
+    "demo",
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier --write .",
