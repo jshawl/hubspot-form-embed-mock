@@ -19,7 +19,6 @@ export const hbspt = {
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (onFormSubmit) {
-          console.log("i am here");
           onFormSubmit(form);
         }
 
