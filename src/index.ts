@@ -1,3 +1,3 @@
-import { hbspt } from './hbspt';
+import { hbspt } from "./hbspt";
 
 window.hbspt = hbspt;
