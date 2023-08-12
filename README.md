@@ -1,5 +1,10 @@
 # HubSpot Form Embed Mock
 
+This project implements the
+[HubSpot Forms Embed API](https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options)
+without making any network requests in order to facilitate testing in
+development and test environments.
+
 ## Usage
 
 Replace your existing HubSpot embed `script`
