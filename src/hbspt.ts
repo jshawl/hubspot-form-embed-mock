@@ -4,6 +4,8 @@ interface Options {
   onFormSubmitted?: (form: HTMLFormElement) => void;
 }
 
+console.log('pls error')
+
 export const hbspt = {
   forms: {
     create: ({ onFormReady, onFormSubmit, onFormSubmitted }: Options) => {
