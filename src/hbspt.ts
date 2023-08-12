@@ -32,41 +32,48 @@ export const hbspt = {
       if (options.onBeforeFormInit) {
         options.onBeforeFormInit(options);
       }
+
       let container: HTMLElement | null;
       if (options.target) {
         container = document.querySelector(options.target);
       } else {
         container = document.body;
       }
+
       const form = document.createElement("form");
       if (options.cssClass) {
         form.classList.add(options.cssClass);
       }
+
       const input = document.createElement("input");
+      input.setAttribute("type", "email");
+
       const submit = document.createElement("input");
       submit.setAttribute("type", "submit");
       if (options.submitButtonClass) {
         submit.classList.add(options.submitButtonClass);
       }
-      const label = document.createElement("label");
-      label.innerHTML =
-        "<span>Email</span><span class='hs-form-required'>*</span>";
       if (options.submitText) {
         submit.value = options.submitText;
       } else {
         submit.value = "Submit";
       }
-      submit.setAttribute("type", "submit");
-      input.setAttribute("type", "email");
+
+      const label = document.createElement("label");
+      label.innerHTML =
+        "<span>Email</span><span class='hs-form-required'>*</span>";
+
       form.appendChild(label);
       form.appendChild(input);
       form.appendChild(submit);
 
       form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
         if (options.onBeforeFormSubmit) {
           options.onBeforeFormSubmit(form);
         }
-        e.preventDefault();
+
         if (options.onFormSubmit) {
           options.onFormSubmit(form);
         }
@@ -74,11 +81,15 @@ export const hbspt = {
         if (!input.value) {
           return false;
         }
-        if (options.onFormSubmitted) options.onFormSubmitted(form);
+
+        if (options.onFormSubmitted) {
+          options.onFormSubmitted(form);
+        }
 
         if (options.inlineMessage && container) {
           container.innerHTML = options.inlineMessage;
         }
+
         if (options.redirectUrl) {
           window.location.href = options.redirectUrl;
         }
@@ -86,7 +97,9 @@ export const hbspt = {
 
       container?.appendChild(form);
 
-      if (options.onFormReady) options.onFormReady(form);
+      if (options.onFormReady) {
+        options.onFormReady(form);
+      }
     },
   },
 };
