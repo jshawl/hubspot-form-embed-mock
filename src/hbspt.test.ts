@@ -1,7 +1,7 @@
-import { hbspt } from "./hbspt";
+import { hbspt, type Options } from "./hbspt";
 import { describe, expect, test, jest, beforeEach } from "@jest/globals";
 
-const options = {
+const options: Options = {
   portalId: "",
   formId: "",
 };

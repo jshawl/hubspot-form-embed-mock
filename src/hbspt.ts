@@ -1,4 +1,4 @@
-interface Options {
+export interface Options {
   portalId: number | string;
   formId: string;
   region?: string;
